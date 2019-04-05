@@ -163,7 +163,6 @@ C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\bin\Microsoft.Owin.Secur
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.Migrations.InitialModel.resources
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.Migrations.CreateTableCourse.resources
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.Migrations.PopulateCategoryTable.resources
@@ -178,3 +177,7 @@ C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\bin\System.Web.Http.WebH
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\bin\System.Net.Http.Formatting.xml
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\bin\System.Web.Http.xml
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\bin\System.Web.Http.WebHost.xml
+C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.csproj.CopyComplete
+C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.Migrations.Addfollowingstable.resources

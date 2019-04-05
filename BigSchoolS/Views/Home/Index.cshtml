@@ -1,9 +1,9 @@
-﻿@model IEnumerable<BigSchoolS.Models.Course>
+﻿@model BigSchoolS.ViewModels.CoursesViewModel
 @{
     ViewBag.Title = "Home Page";
 }
     <ul class="course">
-        @foreach (var course in Model)
+        @foreach (var course in Model.UpcommingCourse)
         {
             <li>
                 <div class="date">
@@ -17,11 +17,18 @@
                 <div class="details">
                     <span class="lecturer">
                         @course.Lecturer.Name
+                        @if (Model.ShowAction)
+                        {
+                            <button class="btn btn-default btn-sm js-toggle-attendance" data-user-id="@course.LecturerId">Follow</button>
+                        }
                     </span>
                     <span class="category">
                         @course.Category.Name
                     </span>
-                    <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                    @if (Model.ShowAction)
+                    {
+                        <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                    }
                 </div>
             </li>
         }
@@ -39,6 +46,17 @@
                             .removeClass("btn-default")
                             .addClass("btn-info")
                             .text("Going")
+                    })
+                    .fail(function () {
+                        alert("Something failed!");
+                    });
+            });
+
+            $(".js-toggle-follow").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/followings", { followeeId: button.attr("data-user-id") })
+                    .done(function () {
+                        button.text("Following");
                     })
                     .fail(function () {
                         alert("Something failed!");
