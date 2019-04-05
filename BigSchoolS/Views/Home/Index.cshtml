@@ -19,7 +19,7 @@
                         @course.Lecturer.Name
                         @if (Model.ShowAction)
                         {
-                            <button class="btn btn-default btn-sm js-toggle-attendance" data-user-id="@course.LecturerId">Follow</button>
+                            <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
                         }
                     </span>
                     <span class="category">
@@ -40,15 +40,15 @@
         $(document).ready(function () {
             $(".js-toggle-attendance").click(function (e) {
                 var button = $(e.target);
-                $.post("/api/attendance", { courseId: button.attr("data-course-id") })
+                $.post("/api/attendances", { courseId: button.attr("data-course-id") })
                     .done(function () {
                         button
                             .removeClass("btn-default")
                             .addClass("btn-info")
-                            .text("Going")
+                            .text("Đang theo")
                     })
                     .fail(function () {
-                        alert("Something failed!");
+                        alert("Có gì đó sai!");
                     });
             });
 
@@ -59,7 +59,7 @@
                         button.text("Following");
                     })
                     .fail(function () {
-                        alert("Something failed!");
+                        alert("Có gì đó sai!");
                     });
             });
         });

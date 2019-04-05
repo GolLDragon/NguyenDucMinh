@@ -10,7 +10,7 @@ namespace BigSchoolS.Models
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Attendance> Attendance { get; set; }
+        public DbSet<Attendance> Attendances { get; set; }
         public DbSet<Following> Followings { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
