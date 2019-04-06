@@ -19,7 +19,7 @@
                         @course.Lecturer.Name
                         @if (Model.ShowAction)
                         {
-                            <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
+                            <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Theo dõi</button>
                         }
                     </span>
                     <span class="category">
@@ -27,7 +27,7 @@
                     </span>
                     @if (Model.ShowAction)
                     {
-                        <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                        <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Tham gia?</button>
                     }
                 </div>
             </li>
@@ -45,7 +45,7 @@
                         button
                             .removeClass("btn-default")
                             .addClass("btn-info")
-                            .text("Đang theo")
+                            .text("Đã tham gia")
                     })
                     .fail(function () {
                         alert("Có gì đó sai!");
@@ -56,7 +56,7 @@
                 var button = $(e.target);
                 $.post("/api/followings", { followeeId: button.attr("data-user-id") })
                     .done(function () {
-                        button.text("Following");
+                        button.text("Đã theo dõi");
                     })
                     .fail(function () {
                         alert("Có gì đó sai!");

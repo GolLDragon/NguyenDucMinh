@@ -9,11 +9,11 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @User.Identity.GetUserName()<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"> My Upcoming Courses</a></li>
-                    <li><a href="@Url.Action("Attending","Courses")"> Course I'm Going</a></li>
-                    <li><a href="#"> Lecture I'm Flowing</a></li>
+                    <li><a href="@Url.Action("Mine","Courses")">Khóa học tôi đã thêm</a></li>
+                    <li><a href="@Url.Action("Attending","Courses")">Khóa học đang tham dự</a></li>
+                    <li><a href="#">Giảng viên theo dõi</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a></li>
                 </ul>
             </li>
         </ul>
@@ -22,7 +22,7 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink("Đăng ký", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Đăng nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }
