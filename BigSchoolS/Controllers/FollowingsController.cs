@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -36,6 +37,25 @@ namespace BigSchoolS.Controllers
             _dbContext.SaveChanges();
 
             return Ok();
+        }
+
+        [HttpDelete]
+        public IHttpActionResult DeleteFollowing(string id)
+        {
+            var userId = User.Identity.GetUserId();
+
+            var follow = _dbContext.Followings
+               .SingleOrDefault(a => a.FollowerId == userId && a.FolloweeId.Contains(id));
+
+            if (follow == null)
+            {
+                return NotFound();
+            }
+
+            _dbContext.Followings.Remove(follow);
+            _dbContext.SaveChanges();
+
+            return Ok(id);
         }
     }
 }

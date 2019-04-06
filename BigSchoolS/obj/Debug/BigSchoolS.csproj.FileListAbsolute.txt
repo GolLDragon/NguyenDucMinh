@@ -181,3 +181,4 @@ C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.csp
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.csproj.CopyComplete
 C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.Migrations.Addfollowingstable.resources
+C:\Users\Administrator\Desktop\NguyenDucMinh\BigSchoolS\obj\Debug\BigSchoolS.Migrations.AddIsCanceledColumnToCourse.resources
