@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Home Page";
 }
+<div class="row" style="margin-top:15px">
     <ul class="course">
         @foreach (var course in Model.UpcommingCourse)
         {
@@ -17,11 +18,12 @@
                 <div class="details">
                     <span class="lecturer">
                         @course.Lecturer.Name
-                        @if (Model.ShowAction)
-                        {
-                            <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Theo dõi</button>
-                        }
                     </span>
+                    @if (Model.ShowAction)
+                    {
+                        <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Theo dõi</button>
+                    }
+                    <br />
                     <span class="category">
                         @course.Category.Name
                     </span>
@@ -33,7 +35,7 @@
             </li>
         }
     </ul>
-
+</div>
 @section scripts
 {
     <script>

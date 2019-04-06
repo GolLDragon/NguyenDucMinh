@@ -10,20 +10,20 @@
     <ul class="course">
         @foreach (var follow in Model)
         {
-            <li>
-                <div>
-                    <span>
-                        @follow.Name
-                    </span>
-                    <br />
-                    <span>
-                        @follow.UserName
-                    </span>
-                </div>
-                <div class="action">
-                    <a href="#" class="js-cancel-course" data-course-id="@follow.Id">Cancel</a>
-                </div>
-            </li>
+        <li>
+            <div>
+                <span>
+                    @follow.Name
+                </span>
+                <br />
+                <span>
+                    @follow.UserName
+                </span>
+            </div>
+            <div class="action">
+                <a href="#" class="js-cancel-course" data-course-id="@follow.Id">Cancel</a>
+            </div>
+        </li>
         }
     </ul>
 </div>
