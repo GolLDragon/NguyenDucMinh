@@ -19,20 +19,18 @@
             <div class="details">
                 <span class="lecturer">
                     @course.Lecturer.Name
-                    @if (Model.ShowAction)
-                    {
-                        <button class="btn btn-default btn-sm js-toggle-attendance" data-user-id="@course.LecturerId">Theo dõi</button>
-                    }
+                </span>
+                <span>
+                    -
                 </span>
                 <span class="category">
                     @course.Category.Name
                 </span>
-                @if (Model.ShowAction)
-                {
-                    <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Tham gia?</button>
-                }
+                <br/>
+                <a href="#" class="js-cancel-course" data-course-id="@course.Id">Hủy</a>
             </div>
         </li>
+        
     }
 </ul>
 
