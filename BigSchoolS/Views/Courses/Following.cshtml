@@ -21,7 +21,7 @@
                     </span>
                 </div>
                 <div class="action">
-                    <a href="#" class="js-cancel-course" data-following-id="@follow">Hủy</a>
+                    <a href="#" class="js-cancel-course" data-following-id="@follow.Id">Hủy</a>
                 </div>
             </li>
         }
@@ -39,7 +39,7 @@
                 bootbox.confirm("Bạn có chắc muốn hủy ?",
                     function () {
                         $.ajax({
-                            url: "/controllers/followings/" + link.attr("data-following-id"),
+                            url: "/api/followings" + link.attr("data-following-id"),
                             method: "DELETE"
                         })
                             .done(function () {

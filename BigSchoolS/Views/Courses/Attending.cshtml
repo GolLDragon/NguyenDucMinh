@@ -49,7 +49,7 @@
                 bootbox.confirm("Bạn có chắc muốn hủy ?",
                     function () {
                         $.ajax({
-                            url: "/controllers/attendances/" + link.attr("data-attendance-id"),
+                            url: "/api/attendances/" + link.attr("data-attendance-id"),
                             method: "DELETE"
                         })
                             .done(function () {
