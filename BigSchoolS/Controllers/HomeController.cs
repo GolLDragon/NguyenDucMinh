@@ -18,18 +18,19 @@ namespace BigSchoolS.Controllers
         }
         public ActionResult Index()
         {
-            var upcomingCourses = _dbContext.Courses
+            var upcommingCourses = _dbContext.Courses
                 .Include(c => c.Lecturer)
                 .Include(c => c.Category)
-                .Where(c => c.DateTime > DateTime.Now);
+                .Where(c => c.DateTime > DateTime.Now && c.IsCanceled == false);
+
             var viewModel = new CoursesViewModel
             {
-                UpcommingCourse = upcomingCourses,
+                UpcommingCourse = upcommingCourses,
                 ShowAction = User.Identity.IsAuthenticated
             };
-
             return View(viewModel);
         }
+
 
         public ActionResult About()
         {
