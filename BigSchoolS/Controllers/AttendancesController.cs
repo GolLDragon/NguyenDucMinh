@@ -45,7 +45,6 @@ namespace BigSchoolS.Controllers
 
             if (attendance == null)
                 return NotFound();
-
             _dbContext.Attendances.Remove(attendance);
             _dbContext.SaveChanges();
 

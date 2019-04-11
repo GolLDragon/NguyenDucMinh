@@ -10,7 +10,6 @@ namespace BigSchoolS.Models
     public class Attendance
     {
         public Course Course { get; set; }
-
         [Key]
         [Column(Order = 1)]
         public int CourseId { get; set; }
